@@ -1,0 +1,8 @@
+{
+    "type": "sqlite",
+    "port": 3306,
+    "hostname": "127.0.0.1",
+    "username": "u1660_rNg6UiGpfp",
+    "password": "uTzx^wxGjiq9TS@OXPXYaR^j",
+    "dbName": "kuma"
+}
