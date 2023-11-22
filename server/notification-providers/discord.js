@@ -50,24 +50,33 @@ class Discord extends NotificationProvider {
                 let discorddowndata = {
                     username: discordDisplayName,
                     embeds: [{
-                        title: "❌ Your service " + monitorJSON["name"] + " went down. ❌",
+                        title: "<:red:1176425658650472492> Service " + monitorJSON["name"] + " Is Down ",
                         color: 16711680,
+                        url: "https://discord.gg/w8FBRVBrbX",
                         timestamp: heartbeatJSON["time"],
                         fields: [
                             {
-                                name: "Service Name",
+                                name: "<:icons_store:1176426264094056539> Service Name",
                                 value: monitorJSON["name"],
                             },
                             {
-                                name: monitorJSON["type"] === "push" ? "Service Type" : "Service URL",
+                                name: monitorJSON["type"] === "push" ? "<:icons_gitmerge:1176426544370024528> Service Type" : "<:icons_gitmerge:1176426544370024528> Service URL",
                                 value: monitorJSON["type"] === "push" ? "Heartbeat" : address,
                             },
                             {
-                                name: `Time (${heartbeatJSON["timezone"]})`,
+                                name: `<:icons_reminder:1176426625714356315> Time (${heartbeatJSON["timezone"]})`,
                                 value: heartbeatJSON["localDateTime"],
                             },
                             {
-                                name: "Error",
+                                name: "<:icons_activities:1163923362062540941> Uptime",
+                                value: heartbeatJSON["uptime"] == null ? "N/A" : heartbeatJSON["uptime"] + " %",
+                            },
+                            {
+                                name: "<:icons_activities:1163923362062540941> Avg. Ping",
+                                value: heartbeatJSON["ping"] == null ? "N/A" : heartbeatJSON["ping"] + " ms",
+                            },
+                            {
+                                name: "<:icons_info:1176426720425947157> Error",
                                 value: heartbeatJSON["msg"] == null ? "N/A" : heartbeatJSON["msg"],
                             },
                         ],
@@ -85,24 +94,33 @@ class Discord extends NotificationProvider {
                 let discordupdata = {
                     username: discordDisplayName,
                     embeds: [{
-                        title: "✅ Your service " + monitorJSON["name"] + " is up! ✅",
+                        title: "<:green:1176425594532147260> Service " + monitorJSON["name"] + " is UP! ",
                         color: 65280,
+                        url: "https://discord.gg/w8FBRVBrbX",
                         timestamp: heartbeatJSON["time"],
                         fields: [
                             {
-                                name: "Service Name",
+                                name: "<:icons_store:1176426264094056539> Service Name",
                                 value: monitorJSON["name"],
                             },
                             {
-                                name: monitorJSON["type"] === "push" ? "Service Type" : "Service URL",
+                                name: monitorJSON["type"] === "push" ? "<:icons_gitmerge:1176426544370024528> Service Type" : "<:icons_gitmerge:1176426544370024528> Service URL",
                                 value: monitorJSON["type"] === "push" ? "Heartbeat" : address,
                             },
                             {
-                                name: `Time (${heartbeatJSON["timezone"]})`,
+                                name: `<:icons_reminder:1176426625714356315> Time (${heartbeatJSON["timezone"]})`,
                                 value: heartbeatJSON["localDateTime"],
                             },
                             {
-                                name: "Ping",
+                                name: "<:icons_activities:1163923362062540941> Uptime",
+                                value: heartbeatJSON["uptime"] == null ? "N/A" : heartbeatJSON["uptime"] + " %",
+                            },
+                            {
+                                name: "<:icons_activities:1163923362062540941> Avg. Ping",
+                                value: heartbeatJSON["ping"] == null ? "N/A" : heartbeatJSON["ping"] + " ms",
+                            },
+                            {
+                                name: "<:icons_info:1176426720425947157> Ping",
                                 value: heartbeatJSON["ping"] == null ? "N/A" : heartbeatJSON["ping"] + " ms",
                             },
                         ],

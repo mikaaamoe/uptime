@@ -13,7 +13,7 @@ exports.debug = exports.ucfirst = exports.sleep = exports.flipStatus = exports.C
 exports.intHash = exports.localToUTC = exports.utcToLocal = exports.utcToISODateTime = exports.isoToUTCDateTime = exports.parseTimeFromTimeObject = exports.parseTimeObject = exports.getMaintenanceRelativeURL = exports.getMonitorRelativeURL = exports.genSecret = exports.getCryptoRandomInt = exports.getRandomInt = exports.getRandomArbitrary = exports.TimeLogger = exports.polyfill = exports.log = void 0;
 const dayjs = require("dayjs");
 exports.isDev = process.env.NODE_ENV === "development";
-exports.appName = "Uptime Kuma";
+exports.appName = "moonmachine";
 exports.DOWN = 0;
 exports.UP = 1;
 exports.PENDING = 2;
